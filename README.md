@@ -79,7 +79,7 @@ services:
     environment:
       - NIC=ens18        # 用 ip add 或 ifconfig 查一下网卡的真实名称
       - TCP_PORT=20000
-    command: ["client", "--local", "127.0.0.1:10000", "--remote", "你的VPS公网IP:20000"]
+    command: ["client", "--local", "0.0.0.0:10000", "--remote", "你的VPS公网IP:20000"]
     restart: unless-stopped
 ```
 保存退出后，启动容器：  
